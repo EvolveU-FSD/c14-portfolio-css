@@ -2,11 +2,12 @@
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #e6c79c;
+    background-color: #f9f5ff;
+    color: #28262c;
 }
 
 h1 {
-    color: #78586f;
+    color: #998fc7;
 }
 
 header {
@@ -16,38 +17,55 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
 }
 
 nav {
-    background-color: #6fd08c;
+    background-color: #d4c2fc;
     padding: 0.25em;
-    border-radius: 2em;
+    border-radius: 2em;    
 }
 
 button {
-    background-color: #6fd08c;
+    background-color: #d4c2fc;
     padding: 0.5em;
     border-radius: 2em;
     border: none;
-    width: 6em;
-    font-weight: bold;
+    font-size: 1em;
+    width: 6em;    
 }
 
 main {
-    margin-left: 6em;
-    margin-right: 6em;
+    margin-left: 5em;
+    margin-right: 5em;
+
+    display: flex;
+    align-items: start;
 }
 
 .selected-nav-button {
-    background-color: white;
+    background-color: f9f5ff;
 }
 
 .blue-square {
-    background-color: #7b9ea8;
+    margin: 1em;
+    background-color: #d4c2fc;
+    padding: 1em;
+    border-radius: 1em;
+    max-width: 40%;
+}
+
+img {
+    max-width: 100%;
 }
 
 .my-name {
     font-family: serif;
     font-size: 3em;
     font-weight: bold;
+}
+
+.caption {
+    margin-top: 0.25em;
+    text-align: center;
 }
