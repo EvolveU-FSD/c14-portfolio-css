@@ -1,8 +1,18 @@
-<html>
+<html data-theme="light">
     <head>
         <title>Personal Portfolio</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="index.css" />
+        <script>
+            function synchronizeDarkMode() {
+                if(document.getElementById("darkModeSwitch").checked) {
+                    document.documentElement.setAttribute("data-theme","dark")
+                }
+                else {
+                    document.documentElement.setAttribute("data-theme","light")
+                }
+            }
+        </script>    
     </head>
     <body>
         <header>
@@ -29,6 +39,11 @@
             </div>
             <div class="contrast-square center-content">
                 <img src="images/linkedIn.svg" alt="the linked in logo"/>
+            </div>
+            <div class="contrast-square center-content">
+                <div class="slider-container">
+                    <input id="darkModeSwitch" type="checkbox" onchange="synchronizeDarkMode()"/>
+                </div>
             </div>
         </main>
     </body>

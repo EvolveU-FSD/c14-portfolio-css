@@ -1,13 +1,28 @@
+:root {
+    --main-foreground: #28262c;
+    --main-background: #f9f5ff;
+    --light: #d4c2fc;
+    --medium: #998fc7;
+    --contrast: #14248a;
+}
+
+html[data-theme="dark"] {
+    --main-foreground: #f9f5ff;
+    --main-background: #28262c;
+    --light: #14248a;
+    --medium: #998fc7;
+    --contrast: #d4c2fc;
+}
 
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #f9f5ff;
-    color: #28262c;
+    background-color: var(--main-background);
+    color: var(--main-foreground);
 }
 
 h1 {
-    color: #998fc7;
+    color: var(--medium);
 }
 
 header {
@@ -20,13 +35,14 @@ header {
 }
 
 nav {
-    background-color: #d4c2fc;
+    background-color: var(--light);
     padding: 0.25em;
     border-radius: 2em;    
 }
 
 button {
-    background-color: #d4c2fc;
+    background-color: var(--light);
+    color: var(--main-foreground);
     padding: 0.5em;
     border-radius: 2em;
     border: none;
@@ -43,14 +59,14 @@ main {
  }
 
 .selected-nav-button {
-    background-color: #f9f5ff;
+    background-color: var(--main-background);
 }
 
 .light-square {
     margin: 0.5em;
     padding: 1em;
     border-radius: 1em;
-    background-color: #d4c2fc;
+    background-color: var(--light);
 
     width: 100%;
 
@@ -63,8 +79,8 @@ main {
 
     width: 100%;
 
-    background-color: #14248a;
-    color: #f9f5ff;
+    background-color: var(--contrast);
+    color: var(--main-background);
 }
 
 .center-content {
@@ -90,6 +106,38 @@ img {
 
 .hide-small {
     display: none;
+}
+
+.slider-container {
+    width: 4em;
+    height: 2em;
+
+    border-radius: 1em;
+    position: relative;
+    background-color: var(--light);
+}
+
+#darkModeSwitch {
+    position:absolute;
+    left: 0em;
+
+    margin: 0;
+    appearance: unset;
+    font-size: 1em;
+
+    width: 2em;
+    height: 2em;
+    border-radius: 1em;
+    background-color: var(--main-background);
+    border: 1px solid var(--main-foreground);
+
+    transition: left 0.25s;
+}
+
+#darkModeSwitch:checked {
+    left: 2.0em;
+    background-color: var(--main-foreground);
+    border: 1px solid var(--main-background);
 }
 
 @media only screen and (min-width: 40em) {
