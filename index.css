@@ -17,7 +17,6 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
 }
 
 nav {
@@ -36,10 +35,11 @@ button {
 }
 
 main {
-    margin-left: 4em;
-    margin-right: 4em;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
 
     display: flex;
+    flex-wrap: wrap;
  }
 
 .selected-nav-button {
@@ -47,19 +47,32 @@ main {
 }
 
 .light-square {
-    margin: 1em;
-    background-color: #d4c2fc;
+    margin: 0.5em;
     padding: 1em;
     border-radius: 1em;
+    background-color: #d4c2fc;
+
+    width: 100%;
+
+    align-self: start;
 }
 
 .contrast-square {
-    margin: 1em;
+    margin: 0.5em;
     padding: 1em;
     border-radius: 1em;
 
+    width: 100%;
+
     background-color: #14248a;
     color: #f9f5ff;
+    align-self: start;
+}
+
+.center-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 img {
@@ -75,4 +88,31 @@ img {
 .caption {
     margin-top: 0.25em;
     text-align: center;
+}
+
+.hide-small {
+    display: none;
+}
+
+@media only screen and (min-width: 40em) {
+    main {
+        margin-left: 4em;
+        margin-right: 4em;
+    }
+
+    .hide-small {
+        display: unset;
+    }
+
+    .show-small {
+        display: none;
+    }
+
+    .light-square {
+        max-width: 40%;
+    }
+
+    .contrast-square {
+        max-width: 40%;
+    }
 }
